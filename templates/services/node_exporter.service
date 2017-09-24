@@ -1,0 +1,13 @@
+[Unit]
+Description=Docker Application Container Engine
+Documentation=http://docs.docker.com
+
+[Service]
+ExecStart=/usr/bin/node_exporter
+Restart=on-failure
+RestartSec=5
+LimitNOFILE=5000000
+LimitNPROC=5000000
+
+[Install]
+WantedBy=multi-user.target

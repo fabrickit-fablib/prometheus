@@ -1,0 +1,13 @@
+[Unit]
+Description=Docker Application Container Engine
+Documentation=http://docs.docker.com
+
+[Service]
+ExecStart=/usr/bin/prometheus -config.file=/etc/prometheus/prometheus.yml -storage.local.path /var/lib/prometheus/data
+Restart=on-failure
+RestartSec=5
+LimitNOFILE=5000000
+LimitNPROC=5000000
+
+[Install]
+WantedBy=multi-user.target

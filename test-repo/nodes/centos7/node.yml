@@ -1,0 +1,12 @@
+node_map:
+  node_exporter:
+    hosts:
+      - kubernetes-centos7-[1-4].example.com
+    fabruns:
+      - prometheus/node_exporter
+
+  prometheus_1m:
+    hosts:
+      - kubernetes-centos7-[3-4].example.com
+    fabruns:
+      - prometheus/prometheus
